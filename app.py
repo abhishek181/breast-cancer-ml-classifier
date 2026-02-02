@@ -212,7 +212,7 @@ elif option == "Upload Test Data":
     st.markdown("Download a sample CSV file with breast cancer features to test the models:")
     
     # Create download button for test data
-    test_data_url = "https://raw.githubusercontent.com/your-username/breast-cancer-ml-classifier/main/notebooks/test_data.csv"
+    test_data_url = "https://raw.githubusercontent.com/abhishek181/breast-cancer-ml-classifier/refs/heads/main/test_data.csv"
     st.markdown(f"[📥 Download test_data.csv]({test_data_url})")
     
     st.markdown("---")
@@ -240,12 +240,12 @@ elif option == "Upload Test Data":
             
             # Model selection for prediction
             model_files = {
-                'Logistic Regression': 'notebooks/model/logisticRegressionModel.pkl',
-                'Decision Tree': 'notebooks/model/decisionTreeClassifierModel.pkl',
-                'K-Nearest Neighbors': 'notebooks/model/knnModel.pkl',
-                'Naive Bayes': 'notebooks/model/naiveBayesModel.pkl',
-                'Random Forest': 'notebooks/model/randomForestmodel.pkl',
-                'XGBoost': 'notebooks/model/xgBoostModel.pkl'
+                'Logistic Regression': 'model/logisticRegressionModel.pkl',
+                'Decision Tree': 'model/decisionTreeClassifierModel.pkl',
+                'K-Nearest Neighbors': 'model/knnModel.pkl',
+                'Naive Bayes': 'model/naiveBayesModel.pkl',
+                'Random Forest': 'model/randomForestmodel.pkl',
+                'XGBoost': 'model/xgBoostModel.pkl'
             }
             
             selected_model = st.selectbox("Select model for prediction:", list(model_files.keys()))
