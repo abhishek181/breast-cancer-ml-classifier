@@ -1,4 +1,4 @@
-# 🤖 Machine Learning Classification Models Comparison
+# Machine Learning Classification Models Comparison
 
 ## Problem Statement
 
@@ -27,23 +27,23 @@ The following six classification models were implemented and compared:
 
 | ML Model Name | Accuracy | AUC Score | Precision | Recall | F1 Score | MCC Score |
 |---------------|----------|-----------|-----------|--------|----------|-----------|
-| Logistic Regression | 0.9561 | 0.9957 | 0.9589 | 0.9722 | 0.9655 | 0.9054 |
-| Decision Tree | 0.9123 | 0.9157 | 0.9559 | 0.9028 | 0.9286 | 0.8174 |
-| K-Nearest Neighbors | 0.9123 | 0.9559 | 0.9429 | 0.9167 | 0.9296 | 0.8139 |
-| Naive Bayes | 0.9386 | 0.9878 | 0.9452 | 0.9583 | 0.9517 | 0.8676 |
-| Random Forest (Ensemble) | 0.9561 | 0.9937 | 0.9589 | 0.9722 | 0.9655 | 0.9054 |
-| XGBoost (Ensemble) | 0.9561 | 0.9901 | 0.9467 | 0.9861 | 0.9660 | 0.9058 |
+| Logistic Regression | 0.9808 | 0.9846 | 0.9846 | 0.9846 | 0.9846 | 0.9590 |
+| Decision Tree | 0.9423 | 0.9385 | 0.9538 | 0.9538 | 0.9538 | 0.8769 |
+| K-Nearest Neighbors | 0.9808 | 0.9850 | 0.9701 | 1.0000 | 0.9848 | 0.9594 |
+| Naive Bayes | 0.9327 | 0.9866 | 0.9394 | 0.9538 | 0.9466 | 0.8559 |
+| Random Forest (Ensemble) | 0.9615 | 0.9905 | 0.9841 | 0.9538 | 0.9688 | 0.9195 |
+| XGBoost (Ensemble) | 0.9615 | 0.9893 | 0.9692 | 0.9692 | 0.9692 | 0.9179 |
 
 ## Observations on Model Performance
 
 | ML Model Name | Observation about model performance |
 |---------------|-------------------------------------|
-| Logistic Regression | **Best overall performer** with high accuracy (95.61%) and AUC (99.57%). Excellent for this linearly separable dataset with well-scaled features. Simple, interpretable, and highly effective. |
-| Decision Tree | **Lowest performer** with 91.23% accuracy. Prone to overfitting despite good precision (95.59%). The tree structure may be too complex for this dataset, leading to poor generalization. |
-| K-Nearest Neighbors | **Moderate performance** (91.23% accuracy) but good AUC (95.59%). Performance likely limited by curse of dimensionality with 30 features. Sensitive to feature scaling and local noise. |
-| Naive Bayes | **Strong performance** (93.86% accuracy, 98.78% AUC) despite independence assumption. Works well due to the dataset's feature characteristics and good class separation in feature space. |
-| Random Forest (Ensemble) | **Excellent performance** (95.61% accuracy, 99.37% AUC). Ensemble method effectively reduces overfitting. Good balance between performance and interpretability through feature importance. |
-| XGBoost (Ensemble) | **Excellent performance** (95.61% accuracy, 99.01% AUC) with highest recall (98.61%). Gradient boosting handles feature interactions well. Slightly better at detecting malignant cases (higher recall). |
+| Logistic Regression | **Excellent overall performer** with 98.08% accuracy and 98.46% AUC. Balanced performance across all metrics (98.46% precision, recall, F1). High MCC (95.90%) indicates strong correlation between predictions and actual values. Ideal for this linearly separable dataset. |
+| Decision Tree | **Lowest performer** with 94.23% accuracy. Good precision (95.38%) but prone to overfitting. Lower MCC (87.69%) suggests moderate prediction reliability.|
+| K-Nearest Neighbors | **Perfect recall** performer with 100% recall and 98.08% accuracy. Excellent at detecting all positive cases (no false negatives). High AUC (98.50%) and MCC (95.94%). Distance-based approach works well with scaled features. |
+| Naive Bayes | **Strong performer** with highest AUC (98.66%) despite lower accuracy (93.27%). Good balance of precision (93.94%) and recall (95.38%). |
+| Random Forest (Ensemble) | **Robust ensemble performer** with 96.15% accuracy and highest AUC (99.05%). Excellent precision (98.41%) with good generalization. High MCC (91.95%) shows strong predictive power. |
+| XGBoost (Ensemble) | **Balanced ensemble performer** with 96.15% accuracy and 98.93% AUC. Consistent performance across precision, recall, and F1 (96.92%). Strong MCC (91.79%). |
 
 ```
 
