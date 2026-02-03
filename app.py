@@ -22,7 +22,6 @@ st.markdown("---")
 
 # Download sample test data
 st.subheader("Download Sample Test Data")
-st.markdown("Download a sample CSV file with breast cancer features:")
 
 #Github URL
 github_url = "https://raw.githubusercontent.com/abhishek181/breast-cancer-ml-classifier/refs/heads/main/model/fixed_breast_cancer_test_data_raw.csv"
@@ -31,7 +30,7 @@ github_url = "https://raw.githubusercontent.com/abhishek181/breast-cancer-ml-cla
 response = requests.get(github_url)
 
 st.download_button(
-    label="Download fixed_breast_cancer_test_data_raw.csv rom GitHub",
+    label="Download fixed_breast_cancer_test_data_raw.csv",
     data=response.content,
     file_name="fixed_breast_cancer_test_data_raw.csv",
     mime="text/csv"
