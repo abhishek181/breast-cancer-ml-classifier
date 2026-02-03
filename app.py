@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import joblib
 import warnings
+import requests
 warnings.filterwarnings('ignore')
 
 # Page configuration
